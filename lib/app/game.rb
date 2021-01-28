@@ -31,10 +31,12 @@ class Game
   end
 
   def game_end #permet l'affichage de fin de partie quand un vainqueur est détecté ou si il y a match nul
-    if board.full?
-      puts "Partie terminée, vous êtes nuls tous les deux!"
+    Show.new.show_board(@board)
+    puts
+    if board.full? && board.victory? == false
+      puts "Partie terminée, vous êtes nuls tous les deux!".red
     else
-      puts "La partie est finie. BRAVO #{current_player.name} : tu as gagné !"
+      puts "La partie est finie. BRAVO #{current_player.name} : tu as gagné !".green
     end
   end
 end

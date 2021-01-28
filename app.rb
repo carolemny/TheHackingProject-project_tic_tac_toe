@@ -16,7 +16,7 @@ class Application
     # INTRODUCTION AU JEU, RÉCUPÉRATION DES PRÉNOMS, CRÉATION DES JOUEURS
     puts "xoxoxo" * 20
     puts
-    puts " " * 45 + "Bienvenue dans TIC TAC TOE"
+    puts (" " * 45 + "Bienvenue dans TIC TAC TOE").yellow
     puts
     puts "xoxoxo" * 20
     puts
@@ -31,9 +31,9 @@ class Application
     my_game = Game.new(name1, name2)
     system "clear"
     puts
-    puts "Super, #{name1} joue les 'X', #{name2} joue les 'O'.\n\nQue la partie commence !"
+    puts "Super, #{name1} joue les 'X', #{name2} joue les 'O'.\n\nQue la partie commence ! 🏁 "
     puts
-    puts "-> Appuie sur une touche pour continuer."
+    puts "-> Appuie sur une touche pour continuer.".cyan
     gets.chomp
 
     # LANCEMENT D'UNE PARTIE
