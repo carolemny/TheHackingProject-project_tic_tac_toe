@@ -18,6 +18,7 @@ class Board
     board_case_to_change = nil
     while board_case_to_change == nil
       #1) demande au bon joueur ce qu'il souhaite faire
+      puts
       puts "#{current_player.name}, quelle case choisis-tu ?"
       print "> "
       choice = gets.chomp
@@ -29,7 +30,7 @@ class Board
 
   def victory?
     #TO DO : une méthode qui vérifie le plateau et indique s'il y a un vainqueur ou match nul
-    if   (@board_cases_array[0].value == @board_cases_array[1].value && @board_cases_array[0].value == @board_cases_array[2].value && @board_cases_array[0].value != " ") || (@board_cases_array[3].value == @board_cases_array[4].value && @board_cases_array[3].value == @board_cases_array[5].value && @board_cases_array[3].value != " ") || (@board_cases_array[6].value == @board_cases_array[7].value && @board_cases_array[6].value == @board_cases_array[8].value && @board_cases_array[6].value != " ") || (@board_cases_array[0].value == @board_cases_array[3].value && @board_cases_array[0].value == @board_cases_array[6].value && @board_cases_array[0].value != " ") || (@board_cases_array[1].value == @board_cases_array[4].value && @board_cases_array[1].value == @board_cases_array[7].value && @board_cases_array[1].value != " ") || (@board_cases_array[2].value == @board_cases_array[5].value && @board_cases_array[2].value == @board_cases_array[8].value && @board_cases_array[2].value != " ") || (@board_cases_array[0].value == @board_cases_array[4].value && @board_cases_array[0].value == @board_cases_array[8].value && @board_cases_array[0].value != " ")|| (@board_cases_array[2].value == @board_cases_array[4].value && @board_cases_array[2].value == @board_cases_array[6].value && @board_cases_array[2].value != " ")
+    if (@board_cases_array[0].value == @board_cases_array[1].value && @board_cases_array[0].value == @board_cases_array[2].value && @board_cases_array[0].value != " ") || (@board_cases_array[3].value == @board_cases_array[4].value && @board_cases_array[3].value == @board_cases_array[5].value && @board_cases_array[3].value != " ") || (@board_cases_array[6].value == @board_cases_array[7].value && @board_cases_array[6].value == @board_cases_array[8].value && @board_cases_array[6].value != " ") || (@board_cases_array[0].value == @board_cases_array[3].value && @board_cases_array[0].value == @board_cases_array[6].value && @board_cases_array[0].value != " ") || (@board_cases_array[1].value == @board_cases_array[4].value && @board_cases_array[1].value == @board_cases_array[7].value && @board_cases_array[1].value != " ") || (@board_cases_array[2].value == @board_cases_array[5].value && @board_cases_array[2].value == @board_cases_array[8].value && @board_cases_array[2].value != " ") || (@board_cases_array[0].value == @board_cases_array[4].value && @board_cases_array[0].value == @board_cases_array[8].value && @board_cases_array[0].value != " ") || (@board_cases_array[2].value == @board_cases_array[4].value && @board_cases_array[2].value == @board_cases_array[6].value && @board_cases_array[2].value != " ")
       return true
     else
       return false

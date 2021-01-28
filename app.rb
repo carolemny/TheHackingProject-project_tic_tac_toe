@@ -1,24 +1,24 @@
-require 'bundler'
+require "bundler"
 Bundler.require #récupération des Gems indispensables
 
 $:.unshift File.expand_path("./../lib", __FILE__) #tout ce qui est dans le dossier de lib est mis dans le PATH
-require 'app/board_case'
-require 'app/board'
-require 'app/game'
-require 'app/player'
-require 'views/show'
+require "app/board_case"
+require "app/board"
+require "app/game"
+require "app/player"
+require "views/show"
 
 class Application
-  def perform 
-
+  def perform
     system "clear"
     puts
+
     # INTRODUCTION AU JEU, RÉCUPÉRATION DES PRÉNOMS, CRÉATION DES JOUEURS
-    puts "xoxoxo"*20
+    puts "xoxoxo" * 20
     puts
-    puts " "*45 +"Bienvenue dans TIC TAC TOE"
+    puts " " * 45 + "Bienvenue dans TIC TAC TOE"
     puts
-    puts "xoxoxo"*20
+    puts "xoxoxo" * 20
     puts
 
     # CRÉATION DES JOUEURS
@@ -35,17 +35,15 @@ class Application
     puts
     puts "-> Appuie sur une touche pour continuer."
     gets.chomp
+
+    # LANCEMENT D'UNE PARTIE
     is_victory = false
     while is_victory == false && my_game.board.full? == false
       is_victory = my_game.turn
-    end 
+    end
+
+    # FIN D'UNE PARTIE
     my_game.game_end
-    # AFFICHAGE DU PLATEAU
-    
-
-
-    # PARTIE
-    #binding.pry
   end
 end
 
